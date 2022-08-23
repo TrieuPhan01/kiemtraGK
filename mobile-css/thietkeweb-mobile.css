@@ -1,11 +1,59 @@
+header{
+  display: block !important;
+}
+
+header.container img{
+  border-radius: 50%;
+  border: 1px solid;
+  margin-left: 25%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
 header> div>h1{
     font-size: 2rem;
+    text-align: center;
   }
   header> div>h2{
     font-size: 1.2rem;
+    text-align: center;
 }
 
 
 .slide{
    display: none !important;
   }
+
+  .search{
+    text-align: center;
+  }
+
+  .khoi-slide{
+    display: none !important;
+  }
+
+  h2.subject{
+
+    font-size: 30px;
+    margin-bottom: 20px ;
+  }h2.subject::after {
+    display: none;
+  }
+
+  .font-size_doc{
+    font-size: 15px;
+  }
+  h3.subject{
+    
+    font-size: 18px;
+    
+  }
+
+
+  
+.infor>p{
+ 
+  font-size: 10px;
+  margin:0;
+  margin-bottom: 20px;
+ 
+}

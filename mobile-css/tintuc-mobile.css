@@ -3,3 +3,101 @@ header> div>h1{
     
   }
   
+  span.subject::after {
+    content: "┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈";
+    font-size: 0.5rem;
+   
+  }
+
+  header{
+    display: block !important;
+  }
+  
+  header.container img{
+    border-radius: 50%;
+    border: 1px solid;
+    margin-left: 25%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  header> div>h1{
+      font-size: 2rem;
+      text-align: center;
+    }
+    header> div>h2{
+      font-size: 1.2rem;
+      text-align: center;
+  }
+  
+  
+  .slide{
+     display: none !important;
+    }
+  
+    .search{
+      text-align: center;
+    }
+  
+    .khoi-slide{
+      display: none !important;
+    }
+
+      
+  .tin-noi-bat{
+    display: block !important;
+    margin: 0 auto;
+  }
+  .tin-Tong{
+    width: 50%;
+    display: block !important;
+  }
+
+  .tieu-de-tin1{
+    font-size: 13px !important;
+    padding: 15px;
+  }
+
+
+  .tin-noi-bat>div{
+    margin: 0 auto;
+    
+  }
+  .tin-chinh{
+    margin-bottom: 20px;
+  }
+
+
+  .event{
+    display: block !important;
+    position: relative;
+  }
+  
+
+ input[type="button"]{
+  position: absolute;
+  right: 0;
+  top: 40%;
+  overflow: hidden !important;
+ }
+
+ div.event-content{
+  margin-top: 30px;
+  
+ }
+ .event-content h3{
+  height: 65px;
+  overflow: hidden !important;
+ }
+ .event-content p:last-child{
+  height: 80px;
+  overflow: hidden !important;
+ }
+
+   
+.infor>p{
+ 
+  font-size: 10px;
+  margin:0;
+  margin-bottom: 20px;
+ 
+}

@@ -1,15 +1,123 @@
+body{
+  width:100%;
+  
+}
 header>h1{
     font-size:2rem;
+    text-align: center;
   }
 
-.slide{
-    display:none !important; 
-}
-
-div.khung img{
-    display:none !important; 
+image{
+  max-width: 390px;
 }
 
 div.khung h2{
     font-size: 8px;
   }
+
+  
+
+  .container{
+    width: 100%;
+    display: block;
+    width: 390px;
+    
+  }
+
+
+  h1.subject{
+    font-size: 22px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  h1.subject::after {
+    display: none;
+  }
+header.container img{
+  border-radius: 50%;
+  border: 1px solid;
+  margin-left: 25%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+ul.menu{
+  display: grid;
+  padding: 0;
+}
+
+ul.menu>li{
+  height: 20px;
+  padding: 15px;
+}
+.ult>div {
+  font-size: 16px;
+}
+
+.icon-bar{
+  display: none !important;
+}
+
+.khoi-slide{
+  display: none !important;
+}
+
+.font-size_doc{
+  font-size: 15px;
+}
+
+
+
+div.khungs{
+  background-image: none;
+}
+
+
+
+section.container.content{
+  width: 100%;
+  margin: 0;
+}
+
+section.content > h2{
+  font-size: 18px;
+ }
+
+div.khung{
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+
+.tin-noi-bat{
+  display: block !important;
+  margin: 0 auto;
+}
+.tin-Tong{
+  width: 50%;
+  display: block !important;
+}
+
+.tieu-de-tin1{
+  font-size: 13px !important;
+  padding: 15px;
+}
+
+
+.tin-noi-bat>div{
+  margin: 0 auto;
+  
+}
+.tin-chinh{
+  margin-bottom: 20px;
+}
+
+
+.infor>p{
+ 
+  font-size: 10px;
+  margin:0;
+  margin-bottom: 20px;
+ 
+}
