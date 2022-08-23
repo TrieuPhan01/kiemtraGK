@@ -66,40 +66,109 @@
   
 
 
-  .slide{
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden !important;
-    margin-top: 10px;
-    border-radius: 10px;
-    position: relative;
-  }
-  
-  .chuyen-slide{
-    width: 100%;
-    display: flex;
-    margin-left: 0%;
-   animation-delay: 1s;
-  }
-  
-  .chuyen-slide>img{
-    width: 100%;
-    height: 380px;
-  }
-  
-  .dieuhuong{
-    position: absolute;
-    color:white;
-    font-size: 60px;
-    top:45%;
-    left: 30px;
-  }
-  
-  .dieuhuong>i:last-child{
-    position: relative;
-    left: 1000px;
-  }
+/* => CSS slide*/
+.khoi-slide {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+.cac-slide img {
+  width: 100%;
+  height: 380px;
+}
+.cac-slide {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.slide.active2{
+  opacity: 1;
+  visibility: visible;
+}
+.nut-slide span{
+  color: white;
+  font-size: 60px;
+  opacity: 0.6;
+}
+span#btn-prev{
+  position: absolute;
+  top: 40%;
+  left: 2%;
+  z-index: 100;
+  cursor: pointer;
+}
+span#btn-next{
+  position: absolute;
+  top: 40%;
+  right: 2%;
+  z-index: 100;
+  cursor: pointer;
+}
 
+/*xử lý nút next*/
+
+.bien-mat-ben-trai{
+  animation: bien-mat-ben-trai 1s forwards;
+}
+
+@keyframes bien-mat-ben-trai{
+  from{
+    transform:  translateX(0%);
+  }
+  to{
+    transform: translateX(-115%);
+  }
+}
+
+
+.di-vao-ben-phai{
+  animation: di-vao-ben-phai 1s forwards;
+}
+
+@keyframes di-vao-ben-phai{
+  from{
+    transform:  translateX(115%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+
+
+
+/*xử lý nút prev*/
+.bien-mat-ben-phai{
+  animation: bien-mat-ben-phai 1s forwards;
+}
+@keyframes bien-mat-ben-phai{
+  from{
+     transform: translateX(0%);
+  }
+  to{
+     transform: translateX(115%);
+  }
+}
+.di-vao-ben-trai{
+  animation: di-vao-ben-trai 1s forwards;
+}
+@keyframes di-vao-ben-trai{
+  from{
+     transform: translateX(-115%);
+  }
+  to{
+     transform: translateX(0%);
+  }
+}
+
+
+/* // */
 
 
   h2.subject {

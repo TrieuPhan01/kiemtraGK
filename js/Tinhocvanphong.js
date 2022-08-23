@@ -1,37 +1,65 @@
-//JS
-var chuyen = 0;
-function Next(){
-    
-    if(chuyen === 300){
-        chuyen = 0;
-    }
-    else{
-        chuyen+=100;
-    }
-    document.getElementById("chuyenslide").style.marginLeft = '-'+chuyen+'%';
-    
-   
-}
 
-setInterval(Next,3000)
-
-function Val(){
-    if(chuyen === 0){
-        chuyen = 300;
-    }
-    else{
-        chuyen-=100;
-
-    }
-    document.getElementById("chuyenslide").style.marginLeft = '-' + chuyen+'%';
-    
-}   
+//JQuery
 
 
-
-
-//JQUERY
 $(document).ready(function () {
+
+    $(document).ready(function() {
+        //Nút next
+        $('#btn-next').click(function(event) {
+           var slide_sau = $('.active').next();
+           if(slide_sau.length!=0){
+              $('.active').addClass('bien-mat-ben-trai').one('webkitAnimationEnd', function(event) {
+                 $('.bien-mat-ben-trai').removeClass('bien-mat-ben-trai').removeClass('active');
+              });
+              slide_sau.addClass('active').addClass('di-vao-ben-phai').one('webkitAnimationEnd', function(event) {
+                 $('.di-vao-ben-phai').removeClass('di-vao-ben-phai');
+              });
+           }else{
+              $('.active').addClass('bien-mat-ben-trai').one('webkitAnimationEnd', function(event) {
+                 $('.bien-mat-ben-trai').removeClass('bien-mat-ben-trai').removeClass('active');
+              });
+              $('.slide:first-child').addClass('active').addClass('di-vao-ben-phai').one('webkitAnimationEnd', function(event) {
+                 $('.di-vao-ben-phai').removeClass('di-vao-ben-phai');
+              });
+           }
+        });
+     });
+
+        //Nút prev
+     $('#btn-prev').click(function(event) {
+
+        var slide_truoc = $('.active').prev();
+        if(slide_truoc.length!=0){
+            $('.active').addClass('bien-mat-ben-phai').one('webkitAnimationEnd', function(event) {
+                $('.bien-mat-ben-phai').removeClass('bien-mat-ben-phai').removeClass('active');
+            });
+            slide_truoc.addClass('active').addClass('di-vao-ben-trai').one('webkitAnimationEnd', function(event) {
+                $('.di-vao-ben-trai').removeClass('di-vao-ben-trai');
+            });
+        }else{
+            $('.active').addClass('bien-mat-ben-phai').one('webkitAnimationEnd', function(event) {
+                $('.bien-mat-ben-phai').removeClass('bien-mat-ben-phai').removeClass('active');
+            });
+            $('.slide:last-child').addClass('active').addClass('di-vao-ben-trai').one('webkitAnimationEnd', function(event) {
+                $('.di-vao-ben-trai').removeClass('di-vao-ben-trai');
+            });
+        }
+    });
+
+    //Chuyển slide tự động sau 5 giây
+    var interval;
+    var timer = function () {
+        interval = setInterval(function () {
+            $("#btn-next").click();
+        }, 5000);
+    };
+
+    timer();
+
+
+
+    //Hiệu ứng show và close bảng 
     let click1 = 0;
     let click2 = 0;
     let click3 = 0;
@@ -106,7 +134,7 @@ $(document).ready(function () {
 
 
 
-
+// Hiện nút trượt lên sau khí kéo màn hình xuống 100px
 
 $(document).ready(function(){
     $("#gototop").hide()
